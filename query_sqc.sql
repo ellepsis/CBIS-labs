@@ -1,4 +1,4 @@
-DROP TABLE car CASCADE CONSTRAINTS ;
+DROP TABLE car CASCADE CONSTRAINTS;
 
 CREATE TABLE car (
   id           NUMBER(3) PRIMARY KEY,
@@ -17,3 +17,12 @@ CREATE TABLE car_rent (
 );
 
 INSERT INTO CAR_RENT VALUES (1, {d '2000-9-15'}, {d '2000-9-15'}, 'comment 1', 1);
+
+CREATE TABLE driver (
+  id            NUMBER(3) PRIMARY KEY,
+  first_name    VARCHAR2(32) NOT NULL,
+  second_name   VARCHAR2(32) NOT NULL,
+  birthday_date DATE
+);
+
+INSERT INTO driver VALUES (1, 'vasya', 'ivanov', {d '1992-01-01'});

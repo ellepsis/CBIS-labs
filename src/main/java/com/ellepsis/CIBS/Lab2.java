@@ -1,7 +1,5 @@
 package com.ellepsis.CIBS;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import java.sql.*;
 import java.util.Arrays;
 
