@@ -83,6 +83,7 @@ public class S182506 {
     private static java.sql.Connection getConnection()
             throws java.sql.SQLException {
         // Step 2: no driver registration (need use key -D for jvm)
+        System.out.println("Please, input your password:");
         String password = new String(System.console().readPassword());
         // Step 3: java.sql.DriverManager.getConnection(url)
         java.sql.Connection connection =
@@ -111,6 +112,7 @@ public class S182506 {
                     "population NUMBER(12) NOT NULL\n" +
                     ")");
         System.out.println("Table 'countries' was created");
+        statement.close();
     }
 
     private static void fillData(java.sql.Connection connection)
@@ -129,6 +131,7 @@ public class S182506 {
         for (int i = 0; i < count.length; i++)
                 sum += count[i];
         System.out.println(sum + " row(s) was/were inserted");
+        statement.close();
     }
 
     private static void fillDataThroughResultSet(java.sql.Connection connection)
@@ -148,6 +151,8 @@ public class S182506 {
         }
         System.out.println(count +
                 " row(s) was/were updated through result set");
+        statement.close();
+        resultSet.close();
     }
 
     private static void printTable(java.sql.Connection connection)
@@ -156,6 +161,8 @@ public class S182506 {
             java.sql.ResultSet resultSet =
                     statement.executeQuery("SELECT * FROM countries");
             printResultSet(resultSet);
+            statement.close();
+            resultSet.close();
         } catch (java.sql.SQLException e) {
             System.err.println("Can't display the table data");
             throw e;
@@ -194,6 +201,7 @@ public class S182506 {
         java.sql.ResultSet resultSet = databaseMetaData.getTableTypes();
         System.out.println("Existing table types: ");
         printResultSet(resultSet);
+        resultSet.close();
     }
 
 }
