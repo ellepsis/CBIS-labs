@@ -131,7 +131,7 @@ public class Lab5 {
     //Method to bind ConnectionPoolDataSource object
 
     public static void bindConnectionPoolDataSource(Context ctx, String cpdsn)
-        throws SQLException, NamingException{
+        throws SQLException, NamingException {
 
         //Create an OracleConnectionPoolDataSource instance
         OracleConnectionPoolDataSource ocpds = new OracleConnectionPoolDataSource();
@@ -145,13 +145,13 @@ public class Lab5 {
         ocpds.setPortNumber(1521);
 
         //Bind the ConnectionPoolDataSource
-        ctx.rebind (cpdsn, ocpds);
+        ctx.rebind(cpdsn, ocpds);
     }
     
     //Method to bind DataSource object
 
     public static void bindDataSource(Context ctx, String dsn)
-        throws SQLException, NamingException{
+        throws SQLException, NamingException {
 
         //Create an OracleDataSource instance
         OracleDataSource ods = new OracleDataSource();
@@ -165,7 +165,7 @@ public class Lab5 {
         ods.setPortNumber(1521);
 
         //Bind the DataSource
-        ctx.rebind (dsn, ods);
+        ctx.rebind(dsn, ods);
     }
     
 }
