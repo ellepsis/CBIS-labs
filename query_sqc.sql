@@ -26,3 +26,17 @@ CREATE TABLE driver (
 );
 
 INSERT INTO driver VALUES (1, 'vasya', 'ivanov', {d '1992-01-01'});
+
+/*For Lab6*/
+DROP TABLE countries CASCADE CONSTRAINTS;
+
+CREATE TABLE countries (
+  id         NUMBER(3) CONSTRAINT PK PRIMARY KEY,
+  name       VARCHAR2(64) NOT NULL,
+  population NUMBER(12) NOT NULL
+);
+
+INSERT INTO countries VALUES (1, 'Russia', 150000);
+INSERT INTO countries VALUES (2, 'Japan', 350000);
+INSERT INTO countries VALUES (3, 'China', 1350000);
+INSERT INTO countries VALUES (4, 'India', 1180000);
