@@ -40,3 +40,13 @@ INSERT INTO countries VALUES (1, 'Russia', 150000);
 INSERT INTO countries VALUES (2, 'Japan', 350000);
 INSERT INTO countries VALUES (3, 'China', 1350000);
 INSERT INTO countries VALUES (4, 'India', 1180000);
+
+SELECT ГРУППА, ФАМИЛИЯ, ИМЯ, ОТЧЕСТВО, ДАТА_РОЖДЕНИЯ, МЕСТО_РОЖДЕНИЯ
+FROM
+    Н_ЛЮДИ
+    JOIN
+    Н_УЧЕНИКИ
+        ON
+            Н_ЛЮДИ.ИД = Н_УЧЕНИКИ.ЧЛВК_ИД
+        WHERE
+            ГРУППА = 4108;
