@@ -83,7 +83,7 @@ public class Lab6 {
         wrs.close();
     }
 
-    private static OracleWebRowSet readWebRowSet(Context ctx, String webRowSetName)
+    private static OracleWebRowSet readWebRowSet (Context ctx, String webRowSetName)
             throws Exception {
         ByteArrayInputStream bis = new ByteArrayInputStream((byte[])
                     ((Reference)ctx.lookup(webRowSetName)).get(0).getContent());
