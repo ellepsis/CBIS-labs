@@ -10,8 +10,8 @@ import java.sql.SQLException;
  */
 public class JDBCConnectionSingleton {
     private static final String driver = "oracle.jdbc.OracleDriver";
-//    private static final String jdbcUrl = "jdbc:oracle:thin:@localhost:9999:orbis";
-    private static final String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:orbis";
+    private static final String jdbcUrl = "jdbc:oracle:thin:@localhost:9999:orbis";
+//    private static final String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:orbis";
     private static final String user = "s182685";
     private static volatile Connection connection;
 
