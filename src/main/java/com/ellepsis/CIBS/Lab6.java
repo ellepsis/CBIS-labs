@@ -72,6 +72,7 @@ public class Lab6 {
           byte[] bytes = bos.toByteArray();
           Reference refWebRowSet = new Reference(OracleWebRowSet.class.getName(),
             new BinaryRefAddr("wrs", bytes));
+          ctx.rebind("asdf", wrs);
           ctx.rebind(webRowSetName, refWebRowSet);
         } finally {
           try {
