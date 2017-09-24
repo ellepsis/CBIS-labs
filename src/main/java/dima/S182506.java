@@ -69,9 +69,9 @@ public class S182506 {
     private static void bindConnectionToContext() {
         try {
             System.out.println("Please, input your username:");
-            user = "s182506";//System.console().readLine();
+            user = System.console().readLine();
             System.out.println("Please, input your password:");
-            password = "hup388";//new String(System.console().readPassword());
+            password = new String(System.console().readPassword());
             
             //Bind the ConnectionPoolDataSource object
             bindConnectionPoolDataSource(ctx, CONNECTION_POOL_NAME);
@@ -286,7 +286,7 @@ public class S182506 {
         ocpds.setDriverType("thin");
         ocpds.setDatabaseName("orbis");
         ocpds.setServerName("localhost");
-        ocpds.setPortNumber(9999);
+        ocpds.setPortNumber(1521);
 
         //Bind the ConnectionPoolDataSource
         ctx.rebind(cpdsn, ocpds);
