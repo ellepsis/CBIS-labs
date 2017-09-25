@@ -102,10 +102,21 @@ FROM Н_ЛЮДИ
   JOIN Н_УЧЕНИКИ ON Н_ЛЮДИ.ИД = Н_УЧЕНИКИ.ЧЛВК_ИД
 WHERE ГРУППА = 4108;
 
-SELECT COUNT(Фамилия) as Всего, COUNT(distinct ИМЯ) as Разных_имен, COUNT(distinct ОТЧЕСТВО) as Разных_отчеств
+SELECT
+  COUNT(Фамилия)           AS Всего,
+  COUNT(DISTINCT ИМЯ)      AS Разных_имен,
+  COUNT(DISTINCT ОТЧЕСТВО) AS Разных_отчеств
 FROM Н_ЛЮДИ
 WHERE ФАМИЛИЯ = 'Иванов'
       AND length(ИМЯ) > 1
       AND length(ОТЧЕСТВО) > 1
       AND ИМЯ NOT LIKE '_.'
       AND Н_ЛЮДИ.ФАМИЛИЯ NOT LIKE '_.';
+
+CREATE TABLE lab9 (
+  ВСЕГО          NUMBER,
+  РАЗНЫХ_ИМЕН    NUMBER,
+  РАЗНЫХ_ОТЧЕСТВ NUMBER
+);
+
+DROP TABLE lab9;

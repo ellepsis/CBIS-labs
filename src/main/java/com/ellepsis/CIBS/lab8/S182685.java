@@ -16,7 +16,7 @@ import java.sql.Statement;
  * @since 0.0.1
  */
 public class S182685 {
-    private static final String FILE_NAME = "S182685_SERIALIZED";
+    public static final String FILE_NAME = "S182685_SERIALIZED";
 
     public static void main(String[] args) {
         try (Connection connection = JDBCConnectionSingleton.getConnection()) {

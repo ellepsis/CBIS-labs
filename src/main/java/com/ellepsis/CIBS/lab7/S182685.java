@@ -1,9 +1,7 @@
 package com.ellepsis.CIBS.lab7;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import oracle.jdbc.pool.OracleDataSource;
 
-import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.io.*;
 import java.sql.*;
@@ -14,7 +12,6 @@ import java.sql.*;
  */
 public class S182685 {
 
-    public final static String DATA_SOURCE_NAME = "ORACLE_DATA_SOURCE";
     private final static String DATA_SOURCE_SERIALIZED_FILE = "DATA_SOURCE_SERIALIZED_FILE";
     private final static String DB_USERNAME = "s182685";
     private final static String DB_PASSWORD = "some password";
